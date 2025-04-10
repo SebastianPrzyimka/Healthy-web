@@ -1,5 +1,6 @@
+// src/api/server.mjs
 import express from 'express';
-const API_URL = `https://healthy-web-eedo.onrender.com`;
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -46,5 +47,5 @@ app.use((req, res) => {
 	res.status(404).json({ message: 'Route not found' });
 });
 
-// Start the server
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// Vercel's serverless function requires this export format
+export default (req, res) => app(req, res);
