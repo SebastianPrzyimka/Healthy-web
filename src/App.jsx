@@ -1,8 +1,5 @@
-import React, { useState } from 'react';
-
 function App() {
-	const [cart, setCart] = useState([]);
-	return;
+	return <h1></h1>;
 }
 
 export default App;
