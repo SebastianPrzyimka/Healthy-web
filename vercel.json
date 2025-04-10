@@ -9,14 +9,14 @@
 			}
 		},
 		{
-			"src": "src/api/pizza/index.js",
+			"src": "src/api/server.mjs",
 			"use": "@vercel/node"
 		}
 	],
 	"routes": [
 		{
 			"src": "/api/(.*)",
-			"dest": "/src/api/$1"
+			"dest": "/src/api/server.mjs"
 		},
 		{
 			"src": "/(.*)",
