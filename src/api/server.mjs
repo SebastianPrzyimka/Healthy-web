@@ -5,8 +5,6 @@ const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 
-const API = 'https://healthy-web-eedo.onrender.com';
-
 const menu = [
 	{
 		id: 1,
@@ -24,7 +22,6 @@ const menu = [
 	},
 ];
 
-// Routes
 app.get('/api/menu', (req, res) => {
 	res.json({ data: menu });
 });
@@ -39,12 +36,11 @@ app.get('/api/menu/:id', (req, res) => {
 	}
 });
 
-// Catch-all route
 app.use((req, res) => {
 	res.status(404).json({ message: 'Route not found' });
 });
 
-// Start server (for Render)
+// This line is needed for Render
 app.listen(PORT, () => {
-	console.log(`Server is running on port ${PORT}`);
+	console.log(`Server running on port ${PORT}`);
 });
