@@ -5,6 +5,8 @@ const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 
+const API = 'https://healthy-web-eedo.onrender.com';
+
 const menu = [
 	{
 		id: 1,
